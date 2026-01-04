@@ -37,3 +37,7 @@ python3 -m http.server 8000
 ```
 
 然後在瀏覽器中訪問 `http://localhost:8000`
+
+## GitHub 預覽
+
+GitHub Pages 預覽連結：[https://chungyuicheung.github.io/qwen/index.html](https://chungyuicheung.github.io/qwen/index.html)
