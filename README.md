@@ -1,43 +1,59 @@
-# Interactive Web Project
+# West Lake Travel Itinerary - Refactored
 
-This repository contains an interactive web application built with HTML, CSS, and JavaScript. It serves as a demonstration of modern web development techniques and responsive design principles.
+This is a responsive travel itinerary website for a 4-day West Lake trip in Hangzhou, China. The project has been refactored for better maintainability and performance.
 
-## Repository Structure
+## Project Structure
 
-This repository now includes a master index page that serves as a central hub for all projects. You can access it at [master_index.html](./master_index.html).
-
-This allows you to build and organize multiple projects in this single repository without switching between repositories.
-
-## Adding New Projects
-
-To learn how to add new projects to this repository, please see the [PROJECTS_GUIDE.md](./PROJECTS_GUIDE.md) file.
-
-## Project Files
-
-- `index.html` - Main page with complete layout and multimedia content
-- `styles.css` - Stylesheet providing responsive design and visual effects
-- `script.js` - JavaScript file providing interactive functionality
-- `master_index.html` - Central hub for all projects in the repository
+```
+/workspace/
+├── index.html                 # Main HTML file
+├── master_index.html          # Master index page for all projects
+├── PROJECTS_GUIDE.md          # Guide for project management
+├── README.md                  # This file
+├── src/                       # Source files
+│   ├── css/
+│   │   └── styles.css         # Modular CSS styles
+│   ├── js/
+│   │   └── main.js            # Modular JavaScript functionality
+│   ├── assets/                # Images and other assets
+│   └── components/            # Reusable components
+└── server.log                 # Server log file
+```
 
 ## Features
 
-1. **Responsive Design** - Adapts to different screen sizes and devices
-2. **Interactive Navigation** - Smooth scrolling navigation for easy access to different sections
-3. **Multimedia Content** - Includes images and other media elements
-4. **Modern UI Elements** - Clean, contemporary design with user-friendly interactions
-5. **Performance Optimized** - Efficient code structure for fast loading
+- Responsive design that works on mobile and desktop
+- Interactive navigation with smooth scrolling
+- Daily itinerary sections with detailed schedules
+- Image gallery with lightbox functionality
+- Progress bar showing scroll position
+- Back-to-top button for easy navigation
+- Accessible navigation and interactive elements
 
-## Getting Started
+## Refactoring Improvements
 
-To run this project locally, execute the following command in your terminal:
+- **Modular CSS**: Organized styles into logical sections with improved maintainability
+- **Modular JavaScript**: Implemented module pattern for better code organization
+- **Accessibility**: Added ARIA labels and improved focus management
+- **Performance**: Optimized code structure for better loading times
+- **Maintainability**: Separated concerns and documented code
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Responsive design principles
+
+## How to Run
+
+1. Clone or download this repository
+2. Open `index.html` in a web browser, or
+3. Use a local server to serve the files (recommended for full functionality):
 
 ```bash
 cd /workspace
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000` in your browser.
-
-## Deployment
-
-This project can be deployed to any static hosting service that supports HTML, CSS, and JavaScript files.
+Then visit `http://localhost:8000` to view the project.
