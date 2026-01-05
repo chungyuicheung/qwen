@@ -1,53 +1,21 @@
-# Examples 1:
+# Examples beginning with a dot (in the current directory):
+# .gitignore
 
-    Input:
-    ### Added files:
-    [src/main.py, README.md, config.json]
+# It is often useful to ignore temporary files, build artifacts and
+# local configuration files that are not useful to other developers.
+# For example:
+# *.tmp
+# *.log
+# .env
+# build/
+# node_modules/
+# .vscode/
+# .idea/
+# __pycache__/
+# *.pyc
+# .DS_Store
+# Thumbs.db
 
-    ### Deleted files:
-    [old/unused.py]
-    ### Modified files:
-    [utils.py]
-    ###current .gitignore Content
-    (empty)
-    Expected Output:
-    (empty — output nothing)
+# See https://help.github.com/articles/ignoring-files for more about ignoring files.
 
-# Example 2 (Project with artifacts):
-Input:
-### Added files:
-[pycache/main.cpython-310.pyc, dist/app.js, .env.local, .vscode/settings.json
-
-### Deleted files:
-    []
-
-### Modified files:
-[]
-### current .gitignore Content
-*.log
-Expected Output:
-    #Compiled and build artifacts
-    *.pyc
-    pycache/
-    *.o
-    *.obj
-    dist/
-    build/
-    #Dependencies
-    .venv/
-    venv/
-    node_modules/
-    #Logs and temp files
-    *.log
-    *.tmp
-    *.swp
-    #Environment
-    .env
-    .env.local
-    .env.
-    #Editors
-    .vscode/
-    .idea/
-    #Original rules preserved
-    *.log
-Final reminder: Output ONLY the .gitignore content. If nothing should be ignored, output NOTHING.
+# You can also ignore files by prefixing them with a ! character to negate the ignore.
