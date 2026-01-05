@@ -1,8 +1,8 @@
-# 冬日西湖・避世慢遊 互動網頁
+# Interactive Web Project
 
-這是一個關於杭州西湖4日3夜冬季旅遊行程的互動網頁，包含詳細的行程安排、避坑指南和多媒體內容。
+This repository contains an interactive web application built with HTML, CSS, and JavaScript. It serves as a demonstration of modern web development techniques and responsive design principles.
 
-## Repository Master Index
+## Repository Structure
 
 This repository now includes a master index page that serves as a central hub for all projects. You can access it at [master_index.html](./master_index.html).
 
@@ -12,42 +12,32 @@ This allows you to build and organize multiple projects in this single repositor
 
 To learn how to add new projects to this repository, please see the [PROJECTS_GUIDE.md](./PROJECTS_GUIDE.md) file.
 
-## 項目結構
+## Project Files
 
-- `index.html` - 主頁面，包含完整的行程安排和多媒體內容
-- `styles.css` - 樣式文件，提供響應式設計和美觀的視覺效果
-- `script.js` - JavaScript文件，提供互動功能
+- `index.html` - Main page with complete layout and multimedia content
+- `styles.css` - Stylesheet providing responsive design and visual effects
+- `script.js` - JavaScript file providing interactive functionality
+- `master_index.html` - Central hub for all projects in the repository
 
-## 功能特色
+## Features
 
-1. **完整的行程安排** - 涵蓋4天的詳細行程，包含時間、地點和注意事項
-2. **互動導航** - 頁面內平滑滾動導航，方便查看不同部分
-3. **多媒體內容** - 包含西湖相關圖片和旅遊影片
-4. **響應式設計** - 適配不同設備尺寸
-5. **互動元素** - 圖片燈箱效果、滾動動畫、進度條等
+1. **Responsive Design** - Adapts to different screen sizes and devices
+2. **Interactive Navigation** - Smooth scrolling navigation for easy access to different sections
+3. **Multimedia Content** - Includes images and other media elements
+4. **Modern UI Elements** - Clean, contemporary design with user-friendly interactions
+5. **Performance Optimized** - Efficient code structure for fast loading
 
-## 行程概要
+## Getting Started
 
-- **Day 1**: 抵達與老城煙火 (1/22 Thu) - 河坊街、南宋御街、城隍閣
-- **Day 2**: 西湖經典環線 (1/23 Fri) - 斷橋殘雪、白堤、樓外樓、三潭印月
-- **Day 3**: 靈隱佛國與文化沈浸 (1/24 Sat) - 靈隱寺、飛來峰、雲南火鍋
-- **Day 4**: 購物與返程 (1/25 Sun) - 購物中心、伴手禮
-
-## 避坑指南
-
-網頁中包含詳細的避坑建議，涵蓋交通、餐飲、預算管理等多個方面。
-
-## 使用方式
-
-在終端機中執行以下命令啟動本地服務器：
+To run this project locally, execute the following command in your terminal:
 
 ```bash
 cd /workspace
 python3 -m http.server 8000
 ```
 
-然後在瀏覽器中訪問 `http://localhost:8000`
+Then visit `http://localhost:8000` in your browser.
 
-## GitHub 預覽
+## Deployment
 
-GitHub Pages 預覽連結：[https://chungyuicheung.github.io/qwen/index.html](https://chungyuicheung.github.io/qwen/index.html)
+This project can be deployed to any static hosting service that supports HTML, CSS, and JavaScript files.
