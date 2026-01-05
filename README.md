@@ -2,6 +2,16 @@
 
 這是一個關於杭州西湖4日3夜冬季旅遊行程的互動網頁，包含詳細的行程安排、避坑指南和多媒體內容。
 
+## Repository Master Index
+
+This repository now includes a master index page that serves as a central hub for all projects. You can access it at [master_index.html](./master_index.html).
+
+This allows you to build and organize multiple projects in this single repository without switching between repositories.
+
+## Adding New Projects
+
+To learn how to add new projects to this repository, please see the [PROJECTS_GUIDE.md](./PROJECTS_GUIDE.md) file.
+
 ## 項目結構
 
 - `index.html` - 主頁面，包含完整的行程安排和多媒體內容
