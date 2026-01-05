@@ -1,348 +1,259 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>冬日西湖・避世慢遊</title>
-    <link rel="stylesheet" href="src/css/styles.css">
-    <link rel="stylesheet" href="src/css/print.css" media="print">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <meta name="description" content="精心規劃的杭州西湖4日3夜冬季旅遊行程，包含詳細的行程安排、避坑指南和多媒體內容">
-    <meta name="keywords" content="杭州, 西湖, 旅遊, 行程, 冬季旅遊">
-    <meta name="author" content="Travel Planner">
+    <title>Repository Master Index - All Projects Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-title {
+            color: #667eea;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .project-title i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .project-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .project-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .current-project {
+            border-left: 5px solid #ff6b6b;
+            background: #fff8f8;
+        }
+
+        .search-section {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .search-box {
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-box input:focus {
+            border-color: #667eea;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .stat-item {
+            flex: 1;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">跳至主要內容</a> <!-- Skip link for accessibility -->
-    <header>
-        <div class="header-content">
-            <h1>🗓️ 冬日西湖・避世慢遊</h1>
-            <p>精心規劃的杭州西湖4日3夜行程</p>
-            <p><a href="master_index.html" style="color: #a0a0ff; font-size: 0.9em; text-decoration: underline;">← 返回項目總覽</a></p>
+    <div class="container">
+        <header>
+            <h1>Repository Master Index</h1>
+            <p class="subtitle">Central hub for all projects in this repository - Build and organize your projects without switching repositories</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search projects...">
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#overview">行程總覽</a></li>
-                <li><a href="#day1">Day 1</a></li>
-                <li><a href="#day2">Day 2</a></li>
-                <li><a href="#day3">Day 3</a></li>
-                <li><a href="#day4">Day 4</a></li>
-                <li><a href="#tips">避坑指南</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main id="main-content">
-        <section id="overview" class="section">
-            <div class="container">
-                <h2>🗺️ 行程總覽與關鍵調整</h2>
-                <div class="overview-content">
-                    <div class="core-adjustments">
-                        <h3>核心調整（避坑重點）：</h3>
-                        <ul>
-                            <li><strong>演出風險：</strong>「印象西湖」在冬季（通常1月-3月初）因天氣寒冷和設備維護極大機率停演。建議改為「西湖遊船賞夜景」或欣賞室內演出，或將此預算轉移至餐飲。</li>
-                            <li><strong>動線優化：</strong>將孤山樓外樓安排在 Day 2（順路），Day 4 時間太趕不適合去樓外樓。</li>
-                            <li><strong>餐飲策略：</strong>河坊街只逛不吃（遊客陷阱多），正餐集中在湖濱/商圈或老字號總店。</li>
-                            <li><strong>天氣預警：</strong>1月杭州濕冷，體感溫度極低，請務必穿著比預期更保暖的衣物。</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="weather-warning">
-                        <h3>❄️ 冬季裝備提醒</h3>
-                        <p>濕冷魔法攻擊：杭州的0度體感約等於北方的-10度。請備好暖寶寶(暖暖包)、保暖防風的帽子和手套。</p>
-                        <p>鞋子：每天步行近2萬步，請穿最舒服的運動鞋。</p>
-                    </div>
-                </div>
-                
-                <div class="image-gallery">
-                    <h3>西湖四季美景</h3>
-                    <div class="gallery-container">
-                        <img src="https://images.unsplash.com/photo-1546473976-8401a8375a25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="西湖冬日景色">
-                        <img src="https://images.unsplash.com/photo-1584697936183-34738fa4f6db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="西湖遊船">
-                        <img src="https://images.unsplash.com/photo-1585167291517-47a0e88be0c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="靈隱寺">
-                        <img src="https://images.unsplash.com/photo-1598555969736-a8c89a33f1ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="河坊街">
-                    </div>
-                </div>
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Existing West Lake Project -->
+            <div class="project-card current-project">
+                <h3 class="project-title">
+                    <span>🏔️</span> 冬日西湖・避世慢遊 互動網頁
+                </h3>
+                <p class="project-description">
+                    關於杭州西湖4日3夜冬季旅遊行程的互動網頁，包含詳細的行程安排、避坑指南和多媒體內容。
+                </p>
+                <a href="./west_lake_trip.html" class="project-link" target="_blank">View Project</a>
             </div>
-        </section>
 
-        <section id="day1" class="section day-section">
-            <div class="container">
-                <h2>Day 1: 抵達與老城煙火 (1/22 Thu)</h2>
-                <div class="day-content">
-                    <div class="itinerary">
-                        <div class="time-slot">
-                            <span class="time">11:05 - 13:00</span>
-                            <div class="activity">
-                                <h4>抵達與入住</h4>
-                                <p>地鐵1/7號線直達市區。入住湖濱商圈酒店。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">13:00 - 14:00</span>
-                            <div class="activity">
-                                <h4>午餐：龍翔橋周邊</h4>
-                                <p><strong>推薦：</strong>知味觀（總店）就在湖濱附近。</p>
-                                <p><strong>必點：</strong>小籠包、貓耳朵、糖醋里脊（性價比高，比路邊攤衛生）。</p>
-                                <p class="warning"><strong>⚠️避坑：</strong>路邊有人推銷的「現做龍井酥」通常很貴且不正宗，試吃即可。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">14:30 - 17:00</span>
-                            <div class="activity">
-                                <h4>南宋御街 & 河坊街</h4>
-                                <p><strong>體驗：</strong>逛胡慶餘堂（中藥博物館，建築很美）、看銅雕。</p>
-                                <p class="warning"><strong>⚠️避坑：</strong>河坊街上的「網紅臭豆腐」、「叫花雞」多為預製加熱，價格高味道差。想吃小吃建議去旁邊的「大井巷」或回龍翔橋。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">17:00 - 18:30</span>
-                            <div class="activity">
-                                <h4>城隍閣夕照</h4>
-                                <p>登閣看西湖全景與日落，由上往下看八卦田與西湖。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">19:00 - 20:30</span>
-                            <div class="activity">
-                                <h4>晚餐：外婆家（湖濱店）</h4>
-                                <p><strong>攻略：</strong>務必提前由美味不用等/微信取號，否則排隊會崩潰。</p>
-                                <p><strong>菜單：</strong>茶香雞、麻婆豆腐（3元神菜）、紅燒肉。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">20:30</span>
-                            <div class="activity">
-                                <h4>散步回酒店</h4>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="day-media">
-                        <h3>相關圖片</h3>
-                        <div class="media-container">
-                            <img src="https://images.unsplash.com/photo-1585167291517-47a0e88be0c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="河坊街">
-                            <img src="https://images.unsplash.com/photo-1546473976-8401a8375a25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="城隍閣">
-                        </div>
-                    </div>
-                </div>
+            <!-- Add more project cards as you create them -->
+            <div class="project-card">
+                <h3 class="project-title">
+                    <span>➕</span> Add Your Project Here
+                </h3>
+                <p class="project-description">
+                    Create a new project folder in this repository and add a link to it here. 
+                    Keep all your projects organized in one place!
+                </p>
+                <a href="#" class="project-link" onclick="alert('Create a new project in a subfolder and update this link!'); return false;">
+                    Add Project
+                </a>
             </div>
-        </section>
-
-        <section id="day2" class="section day-section">
-            <div class="container">
-                <h2>Day 2: 西湖經典環線 (1/23 Fri)</h2>
-                <div class="day-content">
-                    <div class="itinerary">
-                        <div class="time-slot">
-                            <span class="time">08:30 - 11:30</span>
-                            <div class="activity">
-                                <h4>北線漫步</h4>
-                                <p>地鐵到龍翔橋或鳳起路，步行至斷橋。沿白堤步行，欣賞冬日殘荷。抵達孤山，參觀西冷印社（人文氣息重）。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">11:30 - 13:00</span>
-                            <div class="activity">
-                                <h4>午餐：樓外樓（孤山總店）</h4>
-                                <p><strong>位置優化：</strong>剛好走到孤山，這裡是吃樓外樓的最佳時機。</p>
-                                <p><strong>必點：</strong>東坡肉（按位點）、西湖醋魚（⚠️警告：傳統醋魚用草魚，土腥味重且酸甜口極端，很多人吃不慣。若怕中伏，改點「宋嫂魚羹」或「叫花雞」）。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">13:00 - 15:30</span>
-                            <div class="activity">
-                                <h4>水上西湖</h4>
-                                <p>在中山公園碼頭坐船 → 三潭印月（人民幣1元背景，必去） → 坐船往杭飯/花港方向（南面）。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">15:30 - 17:30</span>
-                            <div class="activity">
-                                <h4>南線夕照</h4>
-                                <p>逛花港觀魚，走一段蘇堤（冬天風大，走一小段體驗即可，不要走全程）。</p>
-                                <p>雷峰塔：建議不登塔，在塔下拍合照即可（登塔人多且現代化電梯感重），或去對面的淨慈寺聽南屏晚鐘（更清幽）。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">18:30</span>
-                            <div class="activity">
-                                <h4>晚餐與夜市</h4>
-                                <p>前往武林夜市。</p>
-                                <p>晚餐：尋找附近的麵館吃片兒川或爆鱔麵（推薦：奎元館或附近評分高的小店）。</p>
-                                <p>夜市小吃：蔥包檜、藕粉。</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="day-media">
-                        <h3>相關圖片</h3>
-                        <div class="media-container">
-                            <img src="https://images.unsplash.com/photo-1584697936183-34738fa4f6db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="西湖遊船">
-                            <img src="https://images.unsplash.com/photo-1546473976-8401a8375a25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="西湖景點">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="day3" class="section day-section">
-            <div class="container">
-                <h2>Day 3: 靈隱佛國與文化沈浸 (1/24 Sat)</h2>
-                <div class="day-content">
-                    <div class="itinerary">
-                        <div class="time-slot">
-                            <span class="time">08:00 - 12:30</span>
-                            <div class="activity">
-                                <h4>靈隱寺 & 飛來峰</h4>
-                                <p><strong>交通：</strong>建議打車直達（早起避峰）或搭乘專線公車。</p>
-                                <p><strong>購票：</strong>飛來峰門票45元（必買）+ 靈隱寺香花券30元（入園後買）。</p>
-                                <p><strong>參觀：</strong>重點看飛來峰石刻造像、靈隱大雄寶殿。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">12:30 - 13:30</span>
-                            <div class="activity">
-                                <h4>午餐：靈隱齋飯</h4>
-                                <p>寺內的素麵館（約30-50元/碗），味道清淡，體驗文化。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">14:30 - 17:00</span>
-                            <div class="activity">
-                                <h4>返回市區 & 休息</h4>
-                                <p>回酒店稍作休息。西湖冬天走路很耗體力。</p>
-                                <p>下午茶：在湖濱in77附近找一家茶館或咖啡廳，面對西湖發呆。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">18:00 - 20:00</span>
-                            <div class="activity">
-                                <h4>晚餐：雲南野生菌火鍋</h4>
-                                <p><strong>地點：</strong>湖濱in77商場內（有多家連鎖，如一坐一忘、雲海餚等，環境好且衛生）。</p>
-                                <p><strong>體驗：</strong>冬天喝菌湯非常滋補，暖身首選。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">20:00 - 21:00</span>
-                            <div class="activity">
-                                <h4>夜間活動（替代印象西湖）</h4>
-                                <p>如果印象西湖停演：推薦去看西湖音樂噴泉（若有開放，通常在19:30）或單純在湖邊散步看燈光秀。</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="day-media">
-                        <h3>相關圖片</h3>
-                        <div class="media-container">
-                            <img src="https://images.unsplash.com/photo-1585167291517-47a0e88be0c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="靈隱寺">
-                            <img src="https://images.unsplash.com/photo-1546473976-8401a8375a25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="西湖夜景">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="day4" class="section day-section">
-            <div class="container">
-                <h2>Day 4: 購物與返程 (1/25 Sun)</h2>
-                <div class="day-content">
-                    <div class="itinerary">
-                        <div class="time-slot">
-                            <span class="time">09:30 - 12:00</span>
-                            <div class="activity">
-                                <h4>最後掃貨</h4>
-                                <p>杭州大廈/湖濱銀泰 in77：購買伴手禮（知味觀的包裝糕點、絲綢等）。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">12:00 - 13:00</span>
-                            <div class="activity">
-                                <h4>午餐：輕鬆收尾</h4>
-                                <p>由於15:45飛機，建議13:00必須出發去機場。</p>
-                                <p>選擇：商場內連鎖杭幫菜（如新白鹿、綠茶）或簡單的生煎包/小籠包，確保上菜快。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="time-slot">
-                            <span class="time">13:00</span>
-                            <div class="activity">
-                                <h4>出發前往蕭山機場</h4>
-                                <p>預留1小時交通+1.5小時安檢。</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="day-media">
-                        <h3>相關圖片</h3>
-                        <div class="media-container">
-                            <img src="https://images.unsplash.com/photo-1585167291517-47a0e88be0c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="購物中心">
-                            <img src="https://images.unsplash.com/photo-1546473976-8401a8375a25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="杭州街景">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="tips" class="section">
-            <div class="container">
-                <h2>💡 避坑與預算控制指南</h2>
-                
-                <div class="tips-section">
-                    <h3>1. 交通避坑</h3>
-                    <ul>
-                        <li><strong>黑車/黃魚車：</strong>景區周邊有很多私家車拉客，絕對不要坐，會繞路或帶你去高價茶葉店。堅持使用滴滴(DiDi)或高德地圖叫網約車，或搭乘公車/地鐵。</li>
-                        <li><strong>共享單車：</strong>周末和節假日西湖邊部分路段禁行自行車，還車點也很少，建議步行或坐景區觀光車（電瓶車）。</li>
-                    </ul>
-                </div>
-                
-                <div class="tips-section">
-                    <h3>2. 餐飲避坑（中伏預警）</h3>
-                    <ul>
-                        <li><strong>西湖醋魚：</strong>再次強調，這是「名氣大、爭議大」的菜。除非你是老饕，否則建議把預算給東坡肉、龍井蝦仁或蟹粉豆腐。</li>
-                        <li><strong>茶葉陷阱：</strong>任何主動搭訕帶你去買「正宗龍井」的熱心路人/司機都是托。買茶去正規超市或品牌店（如西湖牌）。</li>
-                    </ul>
-                </div>
-                
-                <div class="tips-section">
-                    <h3>3. 預算管理</h3>
-                    <p>您的預算RMB 900/人（4天餐飲+門票+交通）其實偏緊。</p>
-                    <ul>
-                        <li><strong>門票：</strong>靈隱(75)+雷峰塔(40)+城隍閣(30)+船票(55) ≈ 200元。</li>
-                        <li><strong>剩餘700元</strong>用於9頓正餐+交通。外婆家/知味觀人均約80-100，雲南火鍋人均約120-150，樓外樓人均150+。</li>
-                        <li><strong>建議：</strong>早餐吃簡單點（燒餅/便利店），午餐知味觀小吃控制成本，把預算留給晚餐。</li>
-                    </ul>
-                </div>
-                
-                <div class="video-section">
-                    <h3>西湖旅遊影片推薦</h3>
-                    <div class="video-container">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/833t4Px1YvQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>冬日西湖・避世慢遊 | 4日3夜精緻行程 | 2026年1月</p>
         </div>
-    </footer>
 
-    <script src="src/js/main.js"></script>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" id="projectCount">2</div>
+                <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Repository</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Possibilities</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            projectCards.forEach(card => {
+                const title = card.querySelector('.project-title').textContent.toLowerCase();
+                const description = card.querySelector('.project-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Update project count
+        const projectCount = document.querySelectorAll('.project-card:not(:first-child)').length + 1; // +1 for the current project
+        document.getElementById('projectCount').textContent = projectCount;
+    </script>
 </body>
 </html>
