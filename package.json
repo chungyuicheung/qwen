@@ -1,0 +1,23 @@
+{
+  "name": "west-lake-travel-itinerary",
+  "version": "1.0.0",
+  "description": "A refactored travel itinerary website for a 4-day West Lake trip in Hangzhou",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "travel",
+    "itinerary",
+    "west-lake",
+    "hangzhou",
+    "responsive",
+    "javascript",
+    "css"
+  ],
+  "author": "Web Developer",
+  "license": "MIT",
+  "devDependencies": {}
+}
