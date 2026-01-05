@@ -1,3 +1,4 @@
+Your site is live at https://chungyuicheung.github.io/qwen/ (Main page) and https://chungyuicheung.github.io/qwen/travel/west_lake_trip.html (West Lake Trip page)
 # West Lake Travel Itinerary - Refactored
 
 This is a responsive travel itinerary website for a 4-day West Lake trip in Hangzhou, China. The project has been refactored for better maintainability and performance.

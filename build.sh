@@ -8,7 +8,8 @@ echo "Building West Lake Travel Itinerary project..."
 mkdir -p dist
 
 # Copy HTML files
-cp index.html master_index.html dist/
+cp index.html dist/
+cp -r travel dist/
 
 # Copy source files
 cp -r src dist/
