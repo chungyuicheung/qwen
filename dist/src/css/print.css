@@ -1,0 +1,81 @@
+/* Print styles for West Lake Travel Itinerary */
+@media print {
+    /* Hide interactive elements that don't make sense in print */
+    header nav,
+    #topButton,
+    #progressBar,
+    .lightbox,
+    footer {
+        display: none !important;
+    }
+    
+    /* Adjust layout for print */
+    body {
+        font-size: 12pt;
+        color: black;
+        background: white;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* Ensure proper page breaks */
+    .section {
+        page-break-inside: avoid;
+        border-bottom: 1px solid #ccc;
+        padding: 1rem 0 !important;
+    }
+    
+    h1, h2, h3, h4 {
+        page-break-after: avoid;
+        color: black;
+    }
+    
+    /* Show URLs for links */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+    
+    /* Hide decorative elements */
+    .time-slot::before,
+    .core-adjustments ul li::before {
+        display: none;
+    }
+    
+    /* Ensure images print */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        page-break-inside: avoid;
+    }
+    
+    /* Adjust grid layouts for print */
+    .overview-content,
+    .day-content {
+        display: block !important;
+    }
+    
+    .gallery-container {
+        display: block !important;
+    }
+    
+    .gallery-container img {
+        width: 30% !important;
+        margin: 1%;
+        display: inline-block;
+    }
+    
+    /* Ensure readability */
+    .warning {
+        border: 1px solid #ccc;
+        background: #fff !important;
+        color: black;
+    }
+}
