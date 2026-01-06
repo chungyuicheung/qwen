@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Match-3: Memories Game</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/game.css">
+    <link rel="stylesheet" href="src/styles/customize.css">
+    <link rel="stylesheet" href="src/styles/memory-timeline.css">
+</head>
+<body>
+    <div id="root">
+        <header>
+            <h1>Romantic Match-3</h1>
+            <nav>
+                <button id="customize-btn">Customize</button>
+                <button id="play-btn">Play</button>
+                <button id="timeline-btn">Memory Timeline</button>
+                <button id="social-btn">Social</button>
+            </nav>
+        </header>
+        
+        <main id="game-container">
+            <div id="game-area">
+                <!-- Game board will be rendered here -->
+                <div id="game-board"></div>
+                <div id="game-ui">
+                    <div id="score">Score: <span id="score-value">0</span></div>
+                    <div id="timer">Time: <span id="timer-value">60</span>s</div>
+                    <div id="moves">Moves: <span id="moves-value">0</span></div>
+                </div>
+            </div>
+            
+            <div id="memory-sidebar">
+                <div id="memory-display">
+                    <h3>Memory of the Day</h3>
+                    <img id="memory-image" src="" alt="Memory Image">
+                    <p id="memory-description"></p>
+                </div>
+                
+                <div id="intimacy-meter">
+                    <h3>Intimacy Level</h3>
+                    <div id="intimacy-bar">
+                        <div id="intimacy-fill"></div>
+                    </div>
+                    <span id="intimacy-value">50%</span>
+                </div>
+            </div>
+        </main>
+        
+        <div id="customize-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Customize Your Game</h2>
+                <div class="upload-section">
+                    <h3>Upload Memory Images</h3>
+                    <div id="drop-zone" class="drop-zone">
+                        <p>Drag & drop your photos here</p>
+                        <input type="file" id="image-upload" multiple accept="image/*">
+                    </div>
+                    <button id="upload-btn">Select Files</button>
+                </div>
+                
+                <div class="theme-section">
+                    <h3>Select Theme</h3>
+                    <select id="theme-selector">
+                        <option value="default">Default</option>
+                        <option value="first-met">First Met</option>
+                        <option value="anniversary">Anniversary</option>
+                        <option value="vacation">Vacation</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div id="timeline-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Memory Timeline</h2>
+                <div id="timeline-container">
+                    <!-- Timeline will be populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="src/index.js"></script>
+</body>
+</html>
