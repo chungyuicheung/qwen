@@ -1,0 +1,33 @@
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .overview-content,
+    .day-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .time {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    .section {
+        padding: 2rem 0;
+    }
+    
+    .section h2 {
+        font-size: 1.8rem;
+    }
+}
